@@ -1,0 +1,16 @@
+.login-bg{
+    background-image: url('../images/register-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.register-body{
+    padding-top: 200px;
+    background-image: url('../images/login/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    height: 100vh;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Admin</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex justify-between">
+        <div class="w-[25%] bg-white">
+            <a href="./index.html" class="block pl-[41px] py-[34px] border-b-[3px] border-b-[#EBEBFF]">
+                <img src="./images/login/site-logo.svg" alt="logo" width="280px" height="68">
+            </a>
+            <ul class="pl-[41px] pt-[34px] flex flex-col gap-[15px]">
+                <li><a class="text-[25px] text-[#B4B4C6] leading-[35px] hover:text-[#009398] duration-300" href="#">Продукты</a></li>
+                <li><a class="text-[25px] text-[#B4B4C6] leading-[35px] hover:text-[#009398] duration-300" href="#">Заказы</a></li>
+                <li><a class="text-[25px] text-[#B4B4C6] leading-[35px] hover:text-[#009398] duration-300" href="#">Категории</a></li>
+                <li><a class="text-[25px] text-[#B4B4C6] leading-[35px] hover:text-[#009398] duration-300" href="#">Сайт</a></li>
+            </ul>
+        </div>
+        <div class="w-[75%] bg-[#F8F8F8] h-[100vh]">
+            <div class="flex items-center py-[30px] border-b-[3px] border-b-[#EBEBFF] pr-[60px] justify-end">
+                <a class="mr-[28px] text-[22px] text-[#A6A6A6]" href="#">Просмотр веб-сайта</a>
+                <div class="w-[3px] h-[15px] bg-[#D6D6D6] mr-[41px] mt-[5px]"></div>
+                <div class="flex items-center gap-[10px]">
+                    <img src="./images/admin/user-icon.svg" alt="user" width="18" height="22">
+                    <span class="admin-username capitalize text-[22px] text-[#A6A6A6]"></span>
+                </div>
+            </div>
+            <div class="flex justify-between px-[45px] mt-[22px] mb-[40px]">
+                <label class="flex items-center w-[377px] bg-white py-[11px] px-[30px] rounded-[30px]">
+                    <input type="text" name="find-input" placeholder="Найти" class="w-[90%] outline-none placeholder:text-[20px] text-[20px]">
+                    <div class="w-[1.5px] h-[42px] bg-[#D6D6D6] mr-[30px]"></div>
+                    <img src="./images/admin/search-icon.svg" alt="icon" width="24" height="24">
+                </label>
+                <button onclick="handleAddProductBtnClick()" class="text-white text-[20px] leading-[23px] py-[20px] px-[14px] border-[3px] border-transparent hover:border-[#009398] hover:bg-white duration-300 hover:text-[#009398] rounded-[29px] bg-[#009398] font-semibold">+ Добавить продукт</button>
+            </div>
+            <ul class="flex items-center justify-center space-x-[46px]">
+                <li class="title-1 font-semibold text-[35px] text-[#009398] pb-[8px] border-b-[2px] border-[#009398]">Каркасные</li>
+                <li class="title-2 font-semibold text-[35px] text-[#A6A6A6] pb-[8px] border-b-[2px] border-transparent">Надувные</li>
+            </ul>
+            <div class="mt-[65px] px-[42px]">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-slate-200">
+                            <th class="py-[17px]  text-[20px] rounded-l-[30px]">Изображение</th>
+                            <th class="py-[17px] text-start text-[20px]">Цена(сум)</th>
+                            <th class="py-[17px] text-start text-[20px]">Количество</th>
+                            <th class="py-[17px] text-start text-[20px]">Рамка</th>
+                            <th class="py-[17px] text-start text-[20px] rounded-r-[30px]">Действия</th>
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="modal-wrapper" class="modal-wrapper scale-0 fixed top-0 bottom-0 left-0 right-0 backdrop-blur duration-300">
+        <div class="modal-inner w-[600px] m-auto absolute    right-0 left-0 p-5 rounded-lg bg-slate-200 shadow-inputShadow"></div>
+    </div>
+    <div class="" avtocom></div>
+
+    <script src="./js/admin.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+          
+        }
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Login</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body class="login-bg flex justify-center items-center">
+    <form class="login-form w-[620px] bg-white text-center rounded-[25px] m-auto px-[37px] pt-[35px] pb-[46px]">
+        <a href="./index.html">
+            <img class="inline-block mb-[17px]" src="./images/login/site-logo.svg" alt="logo" width="421" height="72">
+        </a>
+        <p class="mb-[76px] text-[#A3A3A3] text-[25px] leading-[29px] font-semibold">
+            Введите имя пользователя и пароль, чтобы получить доступ к системе.
+        </p>
+        <input type="text" name="username" autocomplete="off" class="block w-[359px] py-[12px] shadow-lg rounded-[17px] placeholder:text-[#A3A3A3] placeholder:text-[25px] placeholder:font-semibold mb-[17px] placeholder:text-center border-[#CBCBCB] border-[1px] m-auto outline-none text-center text-[25px]" placeholder="Имя пользователя" required>
+        <input type="password" name="password" class="block w-[359px] py-[12px] shadow-lg rounded-[17px] placeholder:text-[#A3A3A3] placeholder:text-[25px] placeholder:font-semibold placeholder:text-center border-[#CBCBCB] border-[1px] m-auto outline-none text-center text-[25px] mb-[47px]" placeholder="Пароль" required>
+        <a class="flex justify-center pb-[35px] font-semibold text-[#3F8C8E] text-[25px] mt-15px" href="./register.html">Forgot password</a>
+        <button class="submit-btn text-white border-[2px] border-transparent text-[25px] font-semibold bg-[#3F8C8E] w-[237px] py-[10px] rounded-[10px] hover:text-[#3F8C8E] hover:bg-white hover:border-[#3F8C8E] duration-300">Войти</button>
+    </form>
+    
+
+    <script src="./js/login.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
